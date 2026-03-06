@@ -1,10 +1,10 @@
+import GeneratedPassword from "./components/GeneratedPassword"
+
 function App() {
   return (
-    <>
- <h1 className="text-3xl font-bold underline">
-    Hello world!
-  </h1>
-    </>
+    <div className="min-h-screen bg-gray-50 flex item-center justify-center">
+ <GeneratedPassword></GeneratedPassword>
+    </div>
   )
 }
 
