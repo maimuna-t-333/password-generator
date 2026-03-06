@@ -19,13 +19,13 @@ function GeneratedPassword() {
 
   const handleGeneratePassword=()=>generatePassword();
   return (
-    <div className="p-8 lg:w-[500px] w-3/4 h-3/4  mx-auto bg-white shadow-lg rounded-lg">
-      <h1 className="text-2xl font-bold mb-4 text-center">Password Generator</h1>
+    <div className="lg:p-12 p-10 lg:w-[500px] lg:h-[600px] w-3/4 h-1/2 lg:mt-16 mt-8 border-1 mx-auto bg-gray-50 shadow-2xl rounded-lg">
+      <h1 className="text-2xl font-bold my-4 mb-10 text-center">Password Generator</h1>
       <div className="flex flex-col gap-4">
         <div>
-          <label htmlFor="length" className="block text-sm font-medium text-gray-700">Password Length</label>
-          <input type="number" id="length" min={4} max={64} value={length} onChange={(e) => setLength(+e.target.value)}
-            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" />
+          <label htmlFor="length" className="block text-sm font-semibold text-gray-700">Password Length:</label>
+          <input type="number" id="length" min={4} max={20} value={length} onChange={(e) => setLength(+e.target.value)}
+            className="mt-3 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-gray-500 focus:border-gray-500" />
         </div>
         <div className="flex items-center">
     <input type="checkbox" checked={includeNumbers} onChange={toggleNumbers} />
@@ -43,10 +43,10 @@ function GeneratedPassword() {
     <input type="checkbox" checked={includeLowercase} onChange={toggleLowercase} />
     <label className="ml-2 text-sm">Include Lowercase Letters</label>
         </div>
-        <button onClick={handleGeneratePassword} className="mt-4 px-4 bg-blue-500 text-white rounded-lg hover:bg-blue-600">Generate Password</button>
+        <button onClick={handleGeneratePassword} className="mt-2 px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600">Generate Password</button>
       {generatedPassword && (
-        <div className="mt-4 p-4 rounded-lg bg-gray-100">
-          <p className="text-lg break-all">{generatedPassword}</p>
+        <div className="mt-4 p-4 rounded-lg border border-gray-200 bg-gray-100">
+          <p className="text-balance break-all">{generatedPassword}</p>
         </div>
       )}
 
