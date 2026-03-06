@@ -20,7 +20,7 @@ function GeneratedPassword() {
     generatePassword
   } = usePasswordStore();
 
-  const [copied, setCopied]=useState();
+  const [copied, setCopied]=useState<boolean>(false);
 
   const handleGeneratePassword=()=>generatePassword();
 
